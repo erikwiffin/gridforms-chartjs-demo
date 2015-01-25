@@ -1,0 +1,9 @@
+.grid-form legend {
+  display: inherit;
+  padding: inherit;
+  margin-bottom: inherit;
+}
+.grid-form label {
+  max-width: inherit;
+  font-weight: inherit;
+}

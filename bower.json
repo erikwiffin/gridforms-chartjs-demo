@@ -1,0 +1,23 @@
+{
+  "name": "charts",
+  "version": "0.0.0",
+  "authors": [
+    "Erik Wiffin <erik.wiffin@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "gridforms": "~1.0.4",
+    "moment": "~2.9.0",
+    "underscore": "~1.7.0",
+    "chartjs": "~1.0.1"
+  }
+}
