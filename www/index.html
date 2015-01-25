@@ -1,0 +1,52 @@
+<html>
+<head>
+    <link rel="stylesheet" href="dist/styles/vendor.css">
+    <link rel="stylesheet" href="dist/styles/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Gridform</h1>
+
+                <form class="grid-form">
+                    <fieldset>
+                        <legend>Form Section</legend>
+                        <div data-row-span="2">
+                            <div data-field-span="1">
+                                <label>Field 1</label>
+                                <input type="text">
+                            </div>
+                            <div data-field-span="1">
+                                <label>Field 2</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div data-row-span="2">
+                            <div data-field-span="1">
+                                <label>Field 3</label>
+                                <input type="text">
+                            </div>
+                            <div data-field-span="1">
+                                <label>Field 4</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+
+            <div class="col-sm-6">
+                <h1>Chart</h1>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="dist/scripts/vendor.js"></script>
+    <script src="dist/scripts/app.js"></script>
+
+</body>
+</html>
