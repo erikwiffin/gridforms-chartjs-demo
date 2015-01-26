@@ -1,6 +1,26 @@
 {
-    "node": true,
-    "browser": true,
+    /* Enforcing options */
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "freeze": true,
+    "immed": true,
+    "indent": 4,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonbsp": true,
+    "nonew": true,
+    "quotmark": "single",
+    "undef": true,
+    "unused": "vars",
+    /* Relaxing options */
     "strict": true,
+    /* Environments */
+    "browser": true,
+    "browserify": true,
+    "devel": true,
     "jquery": true
 }

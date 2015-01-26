@@ -7,3 +7,7 @@
   max-width: inherit;
   font-weight: inherit;
 }
+.grid-form [readonly],
+.grid-form [disabled] {
+  color: #999;
+}

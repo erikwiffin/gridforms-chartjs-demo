@@ -1,32 +1,36 @@
 $(function () {
     'use strict';
 
-    var data = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-datasets: [
-{
-    label: "My First dataset",
-fillColor: "rgba(220,220,220,0.2)",
-strokeColor: "rgba(220,220,220,1)",
-pointColor: "rgba(220,220,220,1)",
-pointStrokeColor: "#fff",
-pointHighlightFill: "#fff",
-pointHighlightStroke: "rgba(220,220,220,1)",
-data: [65, 59, 80, 81, 56, 55, 40]
-},
-{
-    label: "My Second dataset",
-fillColor: "rgba(151,187,205,0.2)",
-strokeColor: "rgba(151,187,205,1)",
-pointColor: "rgba(151,187,205,1)",
-pointStrokeColor: "#fff",
-pointHighlightFill: "#fff",
-pointHighlightStroke: "rgba(151,187,205,1)",
-data: [28, 48, 40, 19, 86, 27, 90]
-}
-]
-};
+    var doughnut = require('./doughnut-demo.js');
 
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myNewChart = new Chart(ctx).Line(data);
+    doughnut.create(
+        $('#red').val(),
+        $('#green').val(),
+        $('#yellow').val()
+    );
+
+    $('#red').on('change', function (event) {
+        doughnut.update('red', $(event.currentTarget).val());
+    });
+    $('#green').on('change', function (event) {
+        doughnut.update('green', $(event.currentTarget).val());
+    });
+    $('#yellow').on('change', function (event) {
+        doughnut.update('yellow', $(event.currentTarget).val());
+    });
+
+    var liveData = require('./live-data-demo.js');
+    var pt = 0;
+
+    liveData.create();
+
+    function updateLiveData(t) {
+        var fps = 1000 / (t - pt);
+
+        liveData.update(fps, t);
+        pt = t;
+
+        window.requestAnimationFrame(updateLiveData);
+    }
+    updateLiveData(17);
 });

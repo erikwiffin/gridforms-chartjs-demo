@@ -7,40 +7,55 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <h1>Gridform</h1>
+            <div class="col-sm-4">
+                <h1>Chart.js demo</h1>
+                <canvas id="doughnut-demo"></canvas>
+            </div>
+            <div class="col-sm-8">
+                <h1>Gridform demo</h1>
 
                 <form class="grid-form">
                     <fieldset>
-                        <legend>Form Section</legend>
-                        <div data-row-span="2">
+                        <legend>Color weights</legend>
+                        <div data-row-span="4">
                             <div data-field-span="1">
                                 <label>Field 1</label>
-                                <input type="text">
+                                <input type="text" value="Red" readonly tabindex="-1">
                             </div>
-                            <div data-field-span="1">
-                                <label>Field 2</label>
-                                <input type="text">
+                            <div data-field-span="3">
+                                <label>Value</label>
+                                <input type="text" value="25" id="red">
                             </div>
                         </div>
-                        <div data-row-span="2">
+                        <div data-row-span="4">
+                            <div data-field-span="1">
+                                <label>Field 2</label>
+                                <input type="text" value="Green" readonly tabindex="-1">
+                            </div>
+                            <div data-field-span="3">
+                                <label>Value</label>
+                                <input type="text" value="50" id="green">
+                            </div>
+                        </div>
+                        <div data-row-span="4">
                             <div data-field-span="1">
                                 <label>Field 3</label>
-                                <input type="text">
+                                <input type="text" value="Yellow" readonly tabindex="-1">
                             </div>
-                            <div data-field-span="1">
-                                <label>Field 4</label>
-                                <input type="text">
+                            <div data-field-span="3">
+                                <label>Value</label>
+                                <input type="text" value="75" id="yellow">
                             </div>
                         </div>
                     </fieldset>
                 </form>
-
             </div>
+        </div>
 
-            <div class="col-sm-6">
-                <h1>Chart</h1>
-                <canvas id="myChart"></canvas>
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>FPS</h1>
+                <canvas id="live-data-demo" width="80" height="10"></canvas>
             </div>
         </div>
     </div>
