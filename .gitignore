@@ -1,5 +1,0 @@
-/build
-/assets/bower_components/
-/node_modules/
-*.swp
-npm-debug.log
